@@ -1,6 +1,5 @@
 class TeamMember {
     name;
-    designation = 'support web dev';
     address = 'BD';
     constructor(name, address) {
         this.name = name;
@@ -10,6 +9,7 @@ class TeamMember {
 
 class Support extends TeamMember {
     groupSupportTime;
+    designation = 'support web dev';
     constructor(name, address, time){
         super(name, address)
         this.groupSupportTime = time;
@@ -19,13 +19,14 @@ class Support extends TeamMember {
     }
 }
 class StudentCare extends TeamMember {
-    
+    designation = 'support student care web dev';
     buildARoutin(student) {
         console.log(this.name, 'Build a routin for', student);
     }
 }
 class NeptuneDev extends TeamMember {
     codeEditor;
+    designation = 'support neptune app dev';
     constructor(name, address, editor){
         super(name, address)
         this.codeEditor = editor;
